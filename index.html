@@ -113,6 +113,7 @@
                 pyodide.pyimport("pyodide.console");
             BANNER =
                 `Welcome to the Pyodide ${pyodide.version} terminal emulator 🐍\n` +
+                `You can drag and drop files to "upload" them and call js.downloadFile() to retrieve them\n` +
                 BANNER;
             const pyconsole = PyodideConsole(pyodide.globals);
 
@@ -307,22 +308,6 @@
             elem.click();
             document.body.removeChild(elem);
         }
-
-        document.addEventListener("DOMContentLoaded", async () => {
-            const pyodide = await loadPyodide();
-
-            $('#terminal').terminal(async (command, term) => {
-                try {
-                    let result = await pyodide.runPythonAsync(command);
-                    term.echo(String(result));
-                } catch (err) {
-                    term.error(String(err));
-                }
-            }, {
-                greetings: 'Pyodide Interactive Terminal\nDrag and drop a file anywhere on the page to upload.',
-                prompt: '>>> '
-            });
-        });
 
         document.addEventListener("dragover", (event) => {
             event.preventDefault();
