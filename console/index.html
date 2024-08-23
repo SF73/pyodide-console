@@ -108,7 +108,7 @@
             });
             await pyodide.loadPackage("micropip");
             const micropip = pyodide.pyimport("micropip");
-            await micropip.install("packages/pikepdf-9.1.0-cp312-cp312-pyodide_2024_0_wasm32.whl");
+            await micropip.install("packages/pikepdf-9.2.0-cp312-cp312-pyodide_2024_0_wasm32.whl");
             let { repr_shorten, BANNER, PyodideConsole } =
                 pyodide.pyimport("pyodide.console");
             BANNER =

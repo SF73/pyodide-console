@@ -15,9 +15,9 @@ with open("myFile.pdf", 'rb') as f:
 
 Try it [here](https://sf73.github.io/pyodide-console/console) !
 
-You can also import it using this wheel `https://sf73.github.io/pyodide-console/console/packages/pikepdf-9.1.0-cp312-cp312-pyodide_2024_0_wasm32.whl`
+You can also import it using this wheel `https://sf73.github.io/pyodide-console/console/packages/pikepdf-9.2.0-cp312-cp312-pyodide_2024_0_wasm32.whl`
 
 ```python
 import micropip
-await micropip.install("https://sf73.github.io/pyodide-console/console/packages/pikepdf-9.1.0-cp312-cp312-pyodide_2024_0_wasm32.whl")
+await micropip.install("https://sf73.github.io/pyodide-console/console/packages/pikepdf-9.2.0-cp312-cp312-pyodide_2024_0_wasm32.whl")
 ```
